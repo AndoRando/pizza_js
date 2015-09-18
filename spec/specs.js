@@ -21,11 +21,21 @@ describe("Pizza", function() {
     expect(pizzaSmall.toppings[0].name).to.eql("Sausage");
     expect(pizzaSmall.toppings[1].name).to.eql("Pepperoni");
   });
+
+  it("returns the price of a family Pizza object instance", function() {
+    var pizzaFamily = new Pizza("Family", null, 12);
+    expect(pizzaFamily.price).to.eql(12);
+  });
 });
 
 describe("Topping", function() {
   it("returns a pepperoni Topping object instance", function() {
     var pepperoni = new Topping("Pepperoni");
     expect(pepperoni.name).to.eql("Pepperoni");
+  });
+
+  it("returns the price of a canadian bacon Topping object instance", function() {
+    var canadianBacon = new Topping("Canadian Bacon", 1.25);
+    expect(canadianBacon.price).to.eql(1.25);
   });
 });
