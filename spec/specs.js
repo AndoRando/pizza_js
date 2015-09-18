@@ -3,6 +3,14 @@ describe("Pizza", function() {
     var testPizza = new Pizza("large");
     expect(testPizza.size).to.eql("large");
   });
+
+  it("returns a medium Pizza object instance with sausage topping", function() {
+    var testTopping = new Topping("Sausage");
+    var testPizza = new Pizza("medium", testTopping);
+    expect(testPizza.size).to.eql("medium");
+    expect(testPizza.topping.name).to.eql("Sausage");
+  });
+
 });
 
 describe("Topping", function() {
