@@ -22,9 +22,19 @@ describe("Pizza", function() {
     expect(pizzaSmall.toppings[1].name).to.eql("Pepperoni");
   });
 
-  it("returns the price of a family Pizza object instance", function() {
+  it("returns the base price of a family Pizza object instance", function() {
     var pizzaFamily = new Pizza("Family", null, 12);
-    expect(pizzaFamily.price).to.eql(12);
+    expect(pizzaFamily.basePrice).to.eql(12);
+  });
+
+  describe("pizzaPrice", function() {
+    it("returns the total cost of a large Pizza with sausage and pepperoni Topping object instances", function() {
+      var sausage = new Topping("Sausage", 1.5);
+      var pepperoni = new Topping("Pepperoni", 1);
+      var toppings = [sausage, pepperoni];
+      var pizzaLarge = new Pizza("large", toppings, 10);
+      expect(pizzaLarge.pizzaPrice()).to.eql(12.5);
+    });
   });
 });
 

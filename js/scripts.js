@@ -1,7 +1,15 @@
-function Pizza(size, toppings, price) {
+function Pizza(size, toppings, basePrice) {
   this.size = size;
   this.toppings = toppings;
-  this.price = price;
+  this.basePrice = basePrice;
+};
+
+Pizza.prototype.pizzaPrice = function() {
+  var totalCost = this.basePrice;
+  this.toppings.forEach(function(topping) {
+    totalCost += topping.price;
+  });
+  return totalCost;
 };
 
 function Topping(name, price) {
