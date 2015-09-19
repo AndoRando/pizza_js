@@ -14,47 +14,61 @@
       <h2>Build the pizza of your dreams</h2>
     </header>
     <div class="container">
-      <h3>Choose the size of your pizza:</h3>
-      <form class="size-area">
-        <ul>
-          <div class="radio">
-            <label><input type="radio" name="size" value="Personal">$5.00 - Personal</label>
-          </div>
-          <div class="radio">
-            <label><input type="radio" name="size" value="Small">$6.50 - Small</label>
-          </div>
-          <div class="radio">
-            <label><input type="radio" name="size" value="Medium">$8.00 - Medium</label>
-          </div>
-          <div class="radio">
-            <label><input type="radio" name="size" value="Large">$10.00 - Large</label>
-          </div>
-          <div class="radio">
-            <label><input type="radio" name="size" value="Family">$12.50 - Family</label>
-          </div>
-        </ul>
+      <form class="pizza-form">
         <div class="toppings-area">
           <h3>Choose your pizza's toppings:</h3>
           <ul>
             <div class="checkbox">
-              <label><input type="checkbox" name="pepperoni" value="pepperoni">$1.00 - Pepperoni</label>
+              <label><input class="topping" type="checkbox" name="pepperoni" id="Pepperoni" value="1">$1.00 - Pepperoni</label>
             </div>
             <div class="checkbox">
-              <label><input type="checkbox" name="canadian-bacon" value="canadianBacon">$1.25 - Canadian Bacon</label>
+              <label><input class="topping" type="checkbox" name="canadian-bacon" id="Canadian Bacon" value="1.25">$1.25 - Canadian Bacon</label>
             </div>
             <div class="checkbox">
-              <label><input type="checkbox" name="sausage" value="sausage">$1.50 - Sausage</label>
+              <label><input class="topping" type="checkbox" name="sausage" id="Sausage" value="1.5">$1.50 - Sausage</label>
             </div>
             <div class="checkbox">
-              <label><input type="checkbox" name="olives" value="olives">$1.00 - Olives</label>
+              <label><input class="topping" type="checkbox" name="olives" id="Olives" value="1">$1.00 - Olives</label>
             </div>
             <div class="checkbox">
-              <label><input type="checkbox" name="green-peppers" value="greenPeppers">$1.25 - Green Peppers</label>
+              <label><input class="topping" type="checkbox" name="green-peppers" id="Green Peppers" value="1.25">$1.25 - Green Peppers</label>
             </div>
             <div class="checkbox">
-              <label><input type="checkbox" name="onions" value="onions">$0.75 - Onions</label>
+              <label><input class="topping" type="checkbox" name="onions" id="Onions" value="0.75">$0.75 - Onions</label>
             </div>
           </ul>
+        </div>
+        <div class="size-area">
+          <h3>Choose the size of your pizza:</h3>
+          <ul>
+            <div class="radio">
+              <label><input class="size" type="radio" name="size" id="Personal" value="5">$5.00 - Personal</label>
+            </div>
+            <div class="radio">
+              <label><input class="size" type="radio" name="size" id="Small" value="6.5">$6.50 - Small</label>
+            </div>
+            <div class="radio">
+              <label><input class="size" type="radio" name="size" id="Medium" value="8">$8.00 - Medium</label>
+            </div>
+            <div class="radio">
+              <label><input class="size" type="radio" name="size" id="Large" value="10">$10.00 - Large</label>
+            </div>
+            <div class="radio">
+              <label><input class="size" type="radio" name="size" id="Family" value="12.5">$12.50 - Family</label>
+            </div>
+          </ul>
+        </div>
+        <div class="quantity-area">
+          <div class="form-group">
+            <h3>How many would you like? <small>Max of 5 per customer</small></h3>
+            <select class="quantity form-control">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
         </div>
         <button type="submit" class="btn">Build!</button>
       </form>
